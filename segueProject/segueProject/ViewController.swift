@@ -20,6 +20,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    // SecondVC'den FirstVC'ye donuste text field'i sifirlar. Didload methodunda bunu basaramazdik cunku uygulama basinda bir kere cagrilir VC'ler arasi geciste her seferinde didload cagrilmaz.
+    override func viewWillAppear(_ animated: Bool) {
+        nameTextField.text = ""
+    }
 
     // Segue gerceklesmeden hemen once yapilacak islemleri hazirlamamiza olanak saglar
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
