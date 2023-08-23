@@ -8,16 +8,17 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-    @IBOutlet var secondVCLbl: UIView!
     
+    //MARK: Outlets
+    @IBOutlet var secondVCLbl: UIView!
     @IBOutlet weak var nameLbl: UILabel!
     
+    //MARK: Variables
     var name = ""
     
+    //MARK: Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-
         nameLbl.text = name
-        
     }
 }
